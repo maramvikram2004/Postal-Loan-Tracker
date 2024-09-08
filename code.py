@@ -60,7 +60,7 @@ def about():
     def me1():
         Label(abt,text='Tamogh and Vikram Application Developer',bg='red').grid(row=2,column=0)
     def sir1():
-        Label(abt,text='@baba.ji_, Advisor',bg='red').grid(row=2,column=4)
+        Label(abt,text='Dr. Shalini Batra, Head CSED',bg='red').grid(row=2,column=4)
     Label(abt,text='Credit goes  To:-',bg='dark slate gray').grid(row=5,column=0,sticky='W')
     Label(abt,text=' Tamogh and Vikram',bg='pink').grid(row=6,column=0,sticky='E')
     def exitc():

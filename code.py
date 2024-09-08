@@ -1,17 +1,17 @@
-from tkinter import *
-from tkinter import messagebox
-import sqlite3
+from tkinter import * #to import all tkkinter modules
+from tkinter import messagebox #to import messagebox used for pop up dialogue boxes or warning signs
+import sqlite3 #for sql usage
 #import bfs
-con=sqlite3.Connection("postofficeDB")
-cur=con.cursor()
+con=sqlite3.Connection("postofficeDB") #connect with a database
+cur=con.cursor() #cursor is created from the cursor object
 cur.execute('create table if not exists post(accno number(10),accname varchar2(10),denom number(7),mupto number(60),duedate date)')
-
+#create a table named post in the database
 def paswrd_checker():
-    if pswrd.get()=='123' and pswr.get() =='vikram':
-        login.destroy()
-        po1()
+    if pswrd.get()=='123' and pswr.get() =='vikram': #check for authentication
+        login.destroy() #shut the login page
+        po1() #open the menu page
     else:
-        messagebox.showerror('Error','Wrong Credential')
+        messagebox.showerror('Error','Wrong Credential') #pop up box saying incorrect credentials
 
 def po1():
     global po
@@ -22,20 +22,9 @@ def po1():
     pic = PhotoImage(file="abt.png")
     Label(po,image=pic).grid(row=0,column=0,rowspan=10,columnspan=6)
 
-   #abt=PhotoImage(file="aboutus.gif")
-    #cntct=PhotoImage(file="contactus.gif")
-    #logof=PhotoImage(file="logof.gif")
-    #adcli=PhotoImage(file="addclient.gif")
-    #sr=PhotoImage(file="search.gif")
-    #modi=PhotoImage(file="modify.gif")
-    #backi=PhotoImage(file="backup.gif")
-    
-
-
     Button(po, text="Logoff",command=logoff,bd=10,bg='#2c1052',fg='blue').grid(row=5, column=2)
     Label(po,text='Choose option',font="Century 20 bold",bg='#311a4e',fg='white').grid(row=0,column=0)
     Button(po, text="Add Client",command=addclient,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=0)
-    
     Button(po, text="Modify",command=modify,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=1)
     Button(po, text="Search",command=search,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=2)
     Button(po, text="Backup",command=backup,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=4, column=2)
@@ -74,16 +63,13 @@ def contact():
     cont.title('Contact')
     pic=PhotoImage(file="abt.png")
     cont.geometry('800x600')
-
-
-
     Label(cont,image=pic).grid(row=0,column=0,rowspan=10,columnspan=10)
     Label(cont,text='For Any Help Contact Through Given Below Details',bg='yellow green').grid(row=2)
-    Label(cont,text='Tamogh Nekkanti, Devlopment Manager',bg='yellow green').grid(row=3)
+    Label(cont,text='Vikram Maram, Devlopment Manager',bg='yellow green').grid(row=3)
     Label(cont,text='Email :-',bg='yellow green').grid(row=4,column=0)
-    Label(cont,text='tamogh@gmail.com',bg='yellow green').grid(row=4,column=1)
+    Label(cont,text='maramvikram2004@gmail.com',bg='yellow green').grid(row=4,column=1)
     Label(cont,text='Phone(office)',bg='yellow green').grid(row=5,column=0)
-    Label(cont,text='+91 8790133749',bg='yellow green').grid(row=5,column=1)
+    Label(cont,text='+91 6309435918',bg='yellow green').grid(row=5,column=1)
     def exitc():
         cont.destroy()
         po1()
@@ -244,9 +230,6 @@ def addclient():
         po1()
     Button(insert,text='close',command=exitc,bg='red').grid(row=6,column=1)
     insert.mainloop()
-
-
-
 
 
 def logon():

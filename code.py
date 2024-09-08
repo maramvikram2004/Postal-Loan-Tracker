@@ -7,7 +7,7 @@ cur=con.cursor()
 cur.execute('create table if not exists post(accno number(10),accname varchar2(10),denom number(7),mupto number(60),duedate date)')
 
 def paswrd_checker():
-    if pswrd.get()=='tamogh' and pswr.get() =='123':
+    if pswrd.get()=='123' and pswr.get() =='vikram':
         login.destroy()
         po1()
     else:
@@ -32,15 +32,15 @@ def po1():
     
 
 
-    Button(po, text="Logoff",command=logoff,bd=10,bg='#2c1052',fg='white').grid(row=5, column=2)
+    Button(po, text="Logoff",command=logoff,bd=10,bg='#2c1052',fg='blue').grid(row=5, column=2)
     Label(po,text='Choose option',font="Century 20 bold",bg='#311a4e',fg='white').grid(row=0,column=0)
-    Button(po, text="Add Client",command=addclient,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=2, column=0)
+    Button(po, text="Add Client",command=addclient,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=0)
     
-    Button(po, text="Modify",command=modify,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=2, column=1)
-    Button(po, text="Search",command=search,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=2, column=2)
-    Button(po, text="Backup",command=backup,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=4, column=2)
-    Button(po, text="Contact",command=contact,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=4, column=0)
-    Button(po, text="About",command=about,font="Century 20 bold",bd=10,bg='#2c1052',fg='white').grid(row=4, column=1)
+    Button(po, text="Modify",command=modify,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=1)
+    Button(po, text="Search",command=search,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=2, column=2)
+    Button(po, text="Backup",command=backup,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=4, column=2)
+    Button(po, text="Contact",command=contact,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=4, column=0)
+    Button(po, text="About",command=about,font="Century 20 bold",bd=10,bg='#2c1052',fg='blue').grid(row=4, column=1)
     po.mainloop()
 def logoff():
     con.commit()

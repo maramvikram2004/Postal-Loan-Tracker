@@ -273,8 +273,8 @@ def logon():
     Button(login,text='Login',command=paswrd_checker,font='Century 10 bold',bd=10,bg='#311a4e',fg='white').grid(row=6,column=1)
     pswrd=Entry(show='*')
     pswr=Entry(show='')
-    Label(login, text='User ID ',font='Century 10 bold',bd=10,bg='#311a4e',fg='white' ).grid(row=5, column=0)
-    Label(login, text='Password ',font='Century 10 bold',bd=10,bg='#311a4e',fg='white' ).grid(row=4, column=0)
+    Label(login, text='Password ',font='Century 10 bold',bd=10,bg='#311a4e',fg='white' ).grid(row=5, column=0)
+    Label(login, text='User ID ',font='Century 10 bold',bd=10,bg='#311a4e',fg='white' ).grid(row=4, column=0)
     pswrd.grid(row=5,column=1)
     pswr.grid(row=4, column=1,)
 
